@@ -14,21 +14,21 @@ let map
 
 function initMap(){
 
-　// 位置情報を取得する
-  navigator.geolocation.getCurrentPosition(function (position) {
+ // 位置情報を取得する
+    navigator.geolocation.getCurrentPosition(function (position) {
     LatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
-　// 取得した位置情報を中心に表示
-   map = new google.maps.Map(document.getElementById('map'), {
+ // 取得した位置情報を中心に表示
+    map = new google.maps.Map(document.getElementById('map'), {
         center: LatLng,
         zoom: 15
-      });
+    });
 
-　// マーカーを立てる
-      var marker = new google.maps.Marker({
-              map : map,         
-              position : LatLng   
-            });
+ // マーカーを立てる
+    var marker = new google.maps.Marker({
+          map : map,         
+          position : LatLng   
+        });
     });
 }
 </script>
